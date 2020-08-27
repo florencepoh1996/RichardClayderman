@@ -1,0 +1,842 @@
+/* 1 rem = 16px*/ 
+/* class use . */
+/* id use # */
+/* padding/margin (top, right, bottom, left)*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	width: 100%;
+	background-color: #F6F6F8;
+}
+
+p {
+	font-family: Verdana, sans-serif;
+}
+
+#cover {
+	background-image: url('Images/Cover.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.menu {
+	position: fixed;
+	cursor: pointer;
+	left: 1rem;
+	top: 1rem;
+}
+
+.dropmenu {
+	display: none;
+	background-color: #FFFFFF;
+	opacity: 0.8;
+	width: 90%;
+	margin: 1rem 30rem 5rem 15rem;
+	z-index: 1;
+}
+
+.menu:hover .dropmenu {
+	display: block;
+}
+
+.dropmenu a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	font-size: 40px;
+	line-height: 2;
+	text-align: center;
+}
+
+.dropmenu a:hover {
+	color: #696969;
+}
+
+/*Navigation*/
+
+#masthead {
+	background-color: #000000;
+	width: 100%;
+}
+
+#masthead h1 {
+	font-family: Gill Sans, sans-serif;
+	font-size: 4rem;
+	color: #FFFFFF;
+	padding-top: 2rem;
+	padding-left: 2rem;
+}
+
+#masthead a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.5rem;
+	font-family: Helvetica, sans-serif;
+}
+
+#navbar li {
+	list-style-type: none;
+	display: inline-block;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+#navbar ul {
+	text-align: center;
+	width: 100%;
+}
+
+#navbar a {
+	text-decoration: none;
+}
+
+#navbar li:hover {
+	border-bottom-style: dotted;
+	border-color: white;
+	border-width: 3px;
+	padding-bottom: 0.5rem;
+}
+
+#navbar {
+	background-color: black;
+	z-index: 1000;
+	padding: 1rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 1500px) {
+	#navbar li {
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	#navbar li {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#masthead h1 {
+		font-size: 2.5rem;
+	}
+
+	#navbar li {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 400px){
+	#masthead h1 {
+		font-size: 1.5rem;
+		padding-left: 1rem;
+	}
+
+	#navbar li {
+		display: block;
+		padding-top: 0.5rem;
+		padding-left: 0;
+	}
+
+	#navbar a {
+		font-size: 1rem;
+	}
+}
+
+/* Footer*/
+
+#footer {
+	width: 100%;
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.left ul {
+	list-style-type: none;	
+	float: left;
+	padding-left: 3rem;
+	padding-top: 0.2rem;
+	display: block;
+}
+
+.left li {
+	padding-top: 0.5rem;
+}
+
+.right ul li{
+	list-style-type: none;
+	display: flex;
+	order: 2;
+	float: right;
+	padding-top: 1rem;
+}
+
+.right ol {
+	list-style-type: none;
+	float: right;
+	padding-right: 2rem;
+	padding-top: 0.5rem;
+	display: flex;
+}
+
+.right li {
+	padding-left: 1rem;
+}
+
+.left a {
+	text-decoration: none;
+	color: white;
+}
+
+.left a:hover {
+	color: #ADD8E6;
+}
+
+.right a {
+	text-decoration: none;
+	color: white;
+}
+
+@media screen and (max-width: 800px){
+	.left ul {
+		padding-left: 2rem;
+	}
+
+	.right ul {
+		padding-right: 1rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.left a {
+		font-size: 0.8rem;
+	}
+
+	.left li {
+		padding: 0;
+	}
+
+	.left ul {
+		padding-left: 0.2rem;
+	}
+
+	.right ol{
+		padding-right: 2rem;
+	}
+
+	.right ul{
+		font-size: 0.8rem;
+		padding-right: 1rem;
+	}
+}
+
+/* Biography Page */
+
+#content h2 {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding-top: 1.5rem;
+}
+
+#content h3 {
+	font-family: Arial, sans-serif;
+	font-size: 2rem;
+	margin: 0rem;
+	padding-bottom: 0.5rem;
+}
+
+#earlylife {
+	margin-left: 2rem;
+	padding: 1rem 3rem 1rem 2rem;
+}
+
+#earlylife p {
+	padding-bottom: 1rem;
+	width: 80%;
+	padding-right: 3rem;
+}
+
+#biopicture img {
+	float: right;
+	padding-right: 3rem;
+	padding-top: 2rem;
+}
+
+#ballade {
+	padding-top: 2rem;
+	width: 90%;
+	padding-left: 2rem;
+}
+
+#ballade p {
+	padding-bottom: 1rem;
+}
+
+#ballade h3 {
+	padding-left: 3rem;
+	padding-bottom: 1rem;
+}
+
+#adeline img {
+	float: left;
+	padding: 3.5rem 3rem 1rem 3rem;
+}
+
+#success {
+	margin-left: 2rem;
+	padding: 2rem;
+	width: 90%;
+}
+
+@media screen and (min-width: 1500px){
+	#biopicture img {
+		padding-top: 1rem;
+	}	
+
+	#earlylife {
+		padding-right: 1rem;
+	}
+
+	#earlylife p {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#earlylife {
+		width: 80%;
+	}
+
+	#adeline {
+		width: 100%;
+		padding-right: 2rem;
+	}
+
+	#success {
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#content h2 {
+		font-size: 2rem;
+	}
+
+	#biopicture img {
+		padding-bottom: 1rem;
+		position: relative;
+		right: 1rem;
+	}
+
+	#earlylife {
+		margin: 0;
+		padding:0;
+		width: 100%;
+		position: relative;
+		left: 2rem;
+	}
+
+	#ballade h3 {
+		padding: 0;
+		margin-bottom: 1rem;
+	}
+
+	#success {
+		width: 100%;
+		margin: 0;
+		padding:2rem;
+	}
+}
+
+/* Music Page*/
+
+#musicpage {
+	width: 80%;
+	margin: 0 auto; 
+	display: flex;
+	flex-flow: row wrap;
+	flex:1;
+	justify-content: space-around;
+}
+
+main a {
+	text-decoration: none;
+	color: black;
+}
+
+.art h2 {
+	margin: 2rem 0rem;
+	text-align: center;
+}
+
+main h1 {
+	font-weight: bold;
+	font-size: 4rem;
+	text-align: center;
+	margin: 2rem 0rem;
+	font-family: Arial, sans-serif;
+}
+
+#musicpage h2 {
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+@media screen and (min-width: 1500px) {
+	#musicpage {
+		width: 100%;
+	}
+
+	.art {
+		padding: 2rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#musicpage {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#musicpage {
+		width: 100%;
+	}
+}
+
+/* Gallery Page*/
+
+#gallerypage h1{
+	font-size: 2rem;
+	border-style: solid;
+	border-width: 2px;
+	width: 16rem;
+	padding:2rem;
+	margin-left: 4rem;
+}
+
+.border {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.frame {
+	margin-top: 2rem;
+	margin-left: 2rem;
+}
+
+.hide{
+	display: none;
+}
+
+@media screen and (min-width: 1500px) {
+	.border {
+		width: 95%;
+		padding-top: 3rem;
+		padding-bottom: 5rem;
+		justify-content: space-between;
+	}
+
+}
+
+/*News Page*/
+
+
+#newspage a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#newspage h2 {
+	font-family: Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 68%;
+}
+
+#newspage a:hover {
+	text-decoration: underline;
+	color: #DC143C;
+}
+
+.newsbox {
+	display: flex;
+	flex-flow: row wrap;	
+	padding: 1rem;
+}
+
+.newsbox img {
+	max-width: 100%;
+	height: auto;
+}
+
+.newshead {
+	margin: 1rem 0rem 1rem 1rem;
+	flex:1;
+}
+
+.newshead p {
+	margin: 1rem 0rem 0rem 1rem;
+	font-family: Arial, sans-serif;
+	width: 65%;
+}
+
+.more {
+	font-family: Arial, sans-serif;
+	font-style: oblique;
+	padding: 0.5rem 0rem 0rem 1rem;
+}
+
+#asidead p {
+	position: fixed;
+	border-style: dashed;
+	border-width: 2px;
+	top: 14rem;
+	left: 60rem;
+	width: 12rem;
+	height: 11rem;
+	padding: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+	#asidead p {
+		position: fixed;
+		bottom: 100rem;
+		left: 45rem;
+		height: 9rem;
+	}
+
+	#newspage h2 {
+		font-size: 1rem;
+		width: 60%;
+	}
+
+	.newshead p {
+		font-size: 0.8rem;
+		width: 60%;
+	}
+}
+
+@media screen and (min-width: 1300px)  {
+	#asidead p {
+		position: fixed;
+		bottom: 100rem;
+		left: 60rem;
+		height: 12rem;
+	}
+
+	#newspage h2 {
+		font-size: 1.5rem;
+		width: 60%;
+	}
+
+	.newshead p {
+		font-size: 1rem;
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#asidead p{
+		display: none;
+	}
+
+	#newspage {
+		padding-left: 2rem;
+	}
+
+	.newshead p {
+		width: 90%;
+	}
+
+	#newspage h2  {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#newspage {
+		padding-left: 1rem;
+	}
+
+	.newshead p {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#newspage h2  {
+		width: 100%;
+	}
+}
+
+/*Contact Us Page*/
+
+.contactus p {
+	font-family: Verdana, sans-serif;
+	font-size: 3rem;
+	text-align: left;
+	font-weight: bold;
+}
+
+#picform img{
+	float: right;
+	padding: 8rem 4rem;
+	width: 50%;
+}
+
+/*https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+
+* {
+	box-sizing: border-box;
+}
+
+input[type=text], select {
+	width: 100%
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	resize: vertical;
+}
+
+textarea {
+	display: flex;
+	flex-direction: column;
+	width: 20rem;
+	padding-left: 1rem;
+	padding-top: 0.5rem;
+}
+
+input[type=submit] {
+	color: white;
+	padding: 1rem;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	flex-flow: column;
+}
+
+input[type=submit]:hover {
+	background-color: #D3D3D3;
+}
+
+.contactus {
+	border-radius: 5px;
+	padding: 4rem;
+	width: 50%;
+	float: left;
+}
+
+#fname {
+	position: relative;
+	top: 1.5rem;
+	right: 5.5rem;
+	height: 2rem;
+	padding-left: 1rem;
+}
+
+#lname {
+	position: relative;
+	top: 1.5rem;
+	right: 5.5rem;
+	height: 2rem;
+	padding-left: 1rem;
+}
+
+#country {
+	position: relative;
+	top: 1.5rem;
+	right: 9.8rem;
+	height: 2rem;
+	padding-left: 1rem;
+}
+
+@media screen and (min-width: 1500px) {
+	#picform {
+	float: right;
+	padding: 9rem 4rem;
+	background-color: #f2f2f2;
+	width: 50%;
+	}
+
+	.contactus {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 6rem 2rem 6rem 8rem;
+	width: 50%;
+	float: left;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.contactus p {
+		font-size: 2rem;
+	}
+
+	#picform {
+	display: none;
+	}
+
+	.contactus {
+	border-radius: 5px;
+	padding: 4rem 4rem 4rem 10rem;
+	width: 100%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.contactus p {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	#picform {
+	display: none;
+	}
+
+	.contactus {
+	border-radius: 5px;
+	padding: 3rem 1rem 3rem 1rem;
+	width: 90%;
+	}
+
+	#fname {
+	position: relative;
+	top:0.5rem;
+	left: 1rem;
+	height: 2rem;
+	padding-left: 1rem;
+}
+
+	.contactus label {
+		padding-top: 1rem;
+	}
+
+	textarea {
+		width: 15rem;
+	}
+
+	#lname {
+	position: relative;
+	top: 0.5rem;
+	left: 1rem;
+	height: 2rem;
+	padding-left: 1rem;
+}
+	#country {
+	position: relative;
+	top: 0.5rem;
+	left: 1rem;
+	height: 2rem;
+	padding-left: 1rem;
+}
+}
+
+/*FAQs Page*/
+
+#faqs h1 {
+	font-size: 2rem;
+}
+
+#faqs h2 {
+	font-weight: bold;
+	padding-left: 1rem;
+}
+
+#faqs p {
+	padding: 1rem 1rem 3rem 1rem;
+}
+
+#top p{
+	text-align: right;
+	padding-bottom: 1rem;
+	padding-right: 0.5rem;
+}
+
+#top a {
+	text-decoration: none;
+	color: black;
+}
+
+#top a:hover {
+	color: red;
+}
+
+/*About Me Page*/
+
+#aboutme h2 {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 1rem;
+}
+
+#aboutme p {
+	padding: 1rem;
+}
+
+#aboutme {
+	display: flex;
+}
+
+#me img{
+	padding: 2rem;
+}
+
+.me2 {
+	margin: 1rem 4rem 1rem 1rem;
+}
+
+@media screen and (max-width: 400px) {
+	#aboutme {
+	display: block;
+	padding-right: 0;
+	}
+}
